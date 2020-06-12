@@ -1,19 +1,21 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Dimensions, Image, TouchableOpacity } from 'react-native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
+import Constants from 'expo-constants';
+
+import Nextscreen from './components/Nextscreen'
+import Homescreen from './components/Homescreen'
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
-  );
+  return(
+    <NavigationContainer>
+        <Stack.Navigator initialRouteName = "Home">
+            <Stack.Screen name = "Home" component = {Homescreen}/>
+            <Stack.Screen name = " " component = {Nextscreen}/>
+        </Stack.Navigator>
+    </NavigationContainer>
+)
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+const Stack = createStackNavigator();
