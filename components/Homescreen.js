@@ -44,27 +44,27 @@ export default class Homescreen extends React.Component{
       if (this.state.loading === true){
         return (<Splashscreen/>)
       } else if (this.state.token === null){
-        return(
-          <View>
-          <Image source = {require("../assets/food.jpg")}
-              style = {styles.background}
-          />
-          <Text style = {styles.appName}>WHEAT</Text>
-          <Text style = {styles.description}>What to eat?</Text>
-          <TouchableOpacity
-          style = {styles.decideButton}
-          onPress = {() => this.props.navigation.navigate(' ')}>
-              <Text style = {styles.decideText}>Decide!</Text>
-          </TouchableOpacity> 
-          <TouchableOpacity 
-          style = {styles.loginButton}
-          // onPress = {() => this.logIn()}
-          onPress = {() => {this.props.navigation.navigate('delete later')}}
-          >
-            <Text style = {styles.loginText}>Try login to unlock more features</Text>
-          </TouchableOpacity>
-          </View>
-        )
+        // return(
+        //   <View>
+        //   <Image source = {require("../assets/food.jpg")}
+        //       style = {styles.background}
+        //   />
+        //   <Text style = {styles.appName}>WHEAT</Text>
+        //   <Text style = {styles.description}>What to eat?</Text>
+        //   <TouchableOpacity
+        //   style = {styles.decideButton}
+        //   onPress = {() => this.props.navigation.navigate(' ')}>
+        //       <Text style = {styles.decideText}>Decide!</Text>
+        //   </TouchableOpacity> 
+        //   <TouchableOpacity 
+        //   style = {styles.loginButton}
+        //   onPress = {() => this.logIn()}
+        //   >
+        //     <Text style = {styles.loginText}>Try login to unlock more features</Text>
+        //   </TouchableOpacity>
+        //   </View>
+        // )
+        return (<VIPscreen/>)
       } else if (this.state.token){
         return (<VIPscreen/>)
       }
@@ -91,7 +91,6 @@ export default class Homescreen extends React.Component{
                   );
                   this.saveTokenToSecureStorage(token)
                   Alert.alert('Logged in!', `Hello User ${(await response.json()).name}!`);
-                  this.goToEvents();
               } else {
                   // type === 'cancel'
               }

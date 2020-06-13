@@ -6,11 +6,19 @@ export default class VIPHomescreen extends React.Component{
     render(){
         return (
             <View style={styles.container}>
-                <View style = {styles.topBar}>
-                    <TouchableOpacity onPress={() => this.props.navigation.openDrawer()}>
-                        <Image source = {require("../assets/sidemenu_btn.png")}/>
-                    </TouchableOpacity>
-                </View>
+                <TouchableOpacity 
+                style={styles.button}
+                onPress={() => this.props.navigation.navigate('VIP Nextscreen')}
+                >
+                    <Text style={styles.buttonText}>Try a Random Recipe</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                style={styles.button}
+                // onPress 
+                >
+                    <Text style={styles.buttonText}>Tell Me a Joke</Text>
+                </TouchableOpacity>
+
             </View>
         )
     }
@@ -22,15 +30,23 @@ const styles = StyleSheet.create({
         height: "100%",
         width: "100%",
         justifyContent: 'flex-start',
+        alignItems : 'center',
         backgroundColor: 'white',
     },
-      topBar : {
-        height : "5%",
-        width : "100%",
-        backgroundColor : "white",
-        flexDirection : "row",
-        justifyContent : 'space-between',
-        alignItems : 'center',
-        paddingHorizontal : 10,
+    button : {
+        height : 40,
+        width : "95%",
+        backgroundColor : "rgba(72,144,226,100)",
+        justifyContent : "center",
+        alignItems : "center",
+        marginTop  : 10,
+        borderRadius : 20,
+    },
+    buttonText : {
+        fontFamily : "Helvetica",
+        color : "white",
+        fontSize : 19,
+        textAlign : "center",
+
     },
 })
