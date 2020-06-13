@@ -3,7 +3,6 @@ import { StyleSheet, Text, View, TouchableOpacity, Dimensions, ScrollView, Image
 import Icon from 'react-native-vector-icons/AntDesign';
 const fetch = require("isomorphic-fetch")
 const spoonacularRandomURL = "https://api.spoonacular.com/recipes/random"
-const jokeURL = "https://api.spoonacular.com/food/jokes/random"
 const apiKey = "?apiKey=a135cf3998044a87a659bd51fc0db451"
 
 export default class Nextscreen extends React.Component{

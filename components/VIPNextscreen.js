@@ -84,6 +84,14 @@ export default class VIPNextscreen extends React.Component{
     render(){
         return (
             <View style={styles.container}>
+                {/* <View style={{flexDirection:"column"}}> */}
+                <TouchableOpacity
+                style={styles.backButton}
+                onPress={() => this.props.navigation.goBack()}>
+                    <Icon name="left" color="white" size={20}/>
+                    {/* <Text style={{color : "white"}}>GO BACK</Text> */}
+                </TouchableOpacity>
+                {/* </View> */}
                 <View style={styles.topContainer}>
                     <View style={styles.topLeftContainer}>
                         <Image source={this.state.imageURL} style={styles.picture}/>
@@ -162,7 +170,6 @@ const styles = StyleSheet.create(
             width : "100%",
             height : "20%",
             flexDirection : "row",
-            // flexDirection : "column",
         },
         topLeftContainer : {
             height : "100%",
@@ -186,7 +193,7 @@ const styles = StyleSheet.create(
         },
         bottomContainer : {
             width : "100%",
-            height : "80%",
+            height : "70%",
             marginTop : 10,
         },
         scroll : {
@@ -206,6 +213,17 @@ const styles = StyleSheet.create(
             fontFamily : "Helvetica",
             color : "white",
             fontSize : 19,
+            marginLeft : 5,
+        },
+        backButton : {
+            height : 40,
+            width : 40,
+            backgroundColor : "rgba(72,144,226,100)",
+            justifyContent : "center",
+            alignItems : "center",
+            borderRadius : 20,
+            flexDirection : "row",
+            marginTop : 5,
             marginLeft : 5,
         },
     }

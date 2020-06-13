@@ -14,7 +14,6 @@ export default function App() {
         <Stack.Navigator initialRouteName = "Wheat">
             <Stack.Screen name = "Wheat" component = {Homescreen}/>
             <Stack.Screen name = " " component = {Nextscreen}/>
-            <Stack.Screen name = "delete later" component = {VIPscreen}/>
         </Stack.Navigator>
     </NavigationContainer>
     )
