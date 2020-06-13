@@ -6,6 +6,7 @@ import Constants from 'expo-constants';
 
 import Nextscreen from './components/Nextscreen'
 import Homescreen from './components/Homescreen'
+import Splashscreen from './components/Splashscreen'
 
 export default function App() {
   return(
@@ -15,7 +16,8 @@ export default function App() {
             <Stack.Screen name = " " component = {Nextscreen}/>
         </Stack.Navigator>
     </NavigationContainer>
-)
+    // <Splashscreen/>
+    )
 }
 
 const Stack = createStackNavigator();
