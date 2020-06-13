@@ -6,17 +6,17 @@ import Constants from 'expo-constants';
 
 import Nextscreen from './components/Nextscreen'
 import Homescreen from './components/Homescreen'
-import Splashscreen from './components/Splashscreen'
+import VIPscreen from './components/VIPscreen';
 
 export default function App() {
   return(
     <NavigationContainer>
-        <Stack.Navigator initialRouteName = "Home">
-            <Stack.Screen name = "Home" component = {Homescreen}/>
+        <Stack.Navigator initialRouteName = "Wheat">
+            <Stack.Screen name = "Wheat" component = {Homescreen}/>
             <Stack.Screen name = " " component = {Nextscreen}/>
+            <Stack.Screen name = "delete later" component = {VIPscreen}/>
         </Stack.Navigator>
     </NavigationContainer>
-    // <Splashscreen/>
     )
 }
 

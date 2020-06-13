@@ -1,9 +1,10 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, Dimensions, Image } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Dimensions, Image, Alert } from 'react-native';
 
 import * as SecureStore from 'expo-secure-store'
 import Splashscreen from './Splashscreen';
 import * as Facebook from 'expo-facebook';
+import VIPscreen from './VIPscreen';
 
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
@@ -57,7 +58,8 @@ export default class Homescreen extends React.Component{
           </TouchableOpacity> 
           <TouchableOpacity 
           style = {styles.loginButton}
-          onPress = {() => this.logIn()}
+          // onPress = {() => this.logIn()}
+          onPress = {() => {this.props.navigation.navigate('delete later')}}
           >
             <Text style = {styles.loginText}>Try login to unlock more features</Text>
           </TouchableOpacity>
