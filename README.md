@@ -28,3 +28,7 @@ password: letmepass
 Note:
 
 Spoonacular only allows a certain amount of API requests for a free account. If an API request fails, it might be because the daily limit is reached.
+
+Wheat App logo designed by my beloved partner: YZ
+
+![Wheat Logo](https://github.com/xinyu-hou/Wheat-App/blob/master/assets/wheat_logo.jpg)
