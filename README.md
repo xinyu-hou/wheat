@@ -2,6 +2,8 @@
 
 [![Wheat App Demo](https://github.com/xinyu-hou/Wheat-App/blob/master/assets/WheatAppDemo.png)](https://www.youtube.com/watch?v=cw9s1YM_dYk)
 
+Click the image above to see the demo video.
+
 At a time when many people have to stay home because of COVID-19, choosing what to eat every day can be a tedious process. Not everyone has the money to order food delivery every day. People have to start cooking. This app that I have developed helps people decide what to cook. 
 
 
